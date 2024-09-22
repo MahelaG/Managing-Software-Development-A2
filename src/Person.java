@@ -40,6 +40,7 @@ public abstract class Person {
 
     public void setAge(int age) {
         this.age = age;
+        this.status = determineStatus(age);
     }
 
     public String getGender() {
