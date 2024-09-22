@@ -2,6 +2,24 @@ public abstract class Person {
     private String name;
     private int age;
     private String gender;
+    private String status; //New attribute
+
+    //Constructor
+    public Person(String name,int age, String gender){
+        this.name = name;
+        this.age = age;
+        this.gender = gender;
+        this.status = determineStatus(age); // Setting status based on age
+    }
+
+    // New method to determine status based on conditions
+    private String determineStatus(int age){
+        if (age >=18 && age <=70){
+            return "active";
+        } else {
+            return "inactive";
+        }
+    }
 
 
     public String Details() {
