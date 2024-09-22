@@ -20,10 +20,23 @@ public abstract class Person {
             return "inactive";
         }
     }
+    // Methods to update age and check status
+    public void setAge(int age) {
+        this.age = age;
+        this.status = determineStatus(age); // update status when age is set
+    }
 
+    // New methods to determine status based on conditions
+    public String checkEligibility(){
+        if(status.equals("active") && age >= 18){
+            return name + "is eligible.";
+        } else {
+            return name + "is not eligible";
+        }
+    }
 
     public String Details() {
-        return "Person, name: " + getName() + ", age: " + getAge() + ", gender: " + getGender();
+        return "Person, name: " + getName() + ", age: " + getAge() + ", gender: " + getGender() + ", status: " + getStatus();
     }
 
     public String getName() {
@@ -38,11 +51,6 @@ public abstract class Person {
         return age;
     }
 
-    public void setAge(int age) {
-        this.age = age;
-        this.status = determineStatus(age);
-    }
-
     public String getGender() {
         return gender;
     }
@@ -50,5 +58,10 @@ public abstract class Person {
     public void setGender(String gender) {
         this.gender = gender;
     }
+    public String getStatus(){
+        return status;
+    }
+
+
 
 }
