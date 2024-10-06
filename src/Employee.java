@@ -3,11 +3,11 @@ public class Employee extends Person {
     private String position;
 
     public Employee() {
-        this.setName(null);
-        this.setAge(0);
-        this.setGender(null);
-        this.setEmployeeId(null);
-        this.setPosition(null);
+        this.setName("Unknown");
+        this.setAge(18);
+        this.setGender("Unspecified");
+        this.setEmployeeId("0000");
+        this.setPosition("Unknown");
     }
 
     public Employee(String name, int age, String gender, String employeeId, String position) {
@@ -35,7 +35,7 @@ public class Employee extends Person {
     }
 
     public void displayEmployeeDetails() {
-        System.out.println("Employee ID: " + id + ", Name: " + name);
+        System.out.println("Employee ID: " + employeeId + ", Name: " + getName() + ", Position: " + position);
     }
     
     @Override
