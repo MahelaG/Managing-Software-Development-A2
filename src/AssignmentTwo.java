@@ -16,7 +16,7 @@ public class AssignmentTwo {
         Ride rollerCoaster = new Ride("Roller Coaster", 12, operator, 1);
 
         // Create Visitor objects
-        Visitor visitor1 = new Visitor("Suzan", 14, "Female", "V001", "Regular");
+        Visitor visitor1 = new Visitor("Suzan", 24, "Female", "V001", "Regular","Has a child under 6");
         Visitor visitor2 = new Visitor("Sadaru", 16, "Male", "V002", "Regular");
         Visitor visitor3 = new Visitor("Prabu", 15, "Male", "V003", "Regular");
         Visitor visitor4 = new Visitor("Renuka", 13, "Female", "V004", "Regular");
